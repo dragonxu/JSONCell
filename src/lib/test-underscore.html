@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>test underscore extend</title>
+    <script type="text/javascript" src="./underscore.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var obj1 = {
+        a:'a',
+        c:{
+            c1:'c1',
+            c2:'c2'
+        }
+    };
+
+    var obj2 = {
+        b:'b',
+        arr:[1,2,3,4]
+    }
+
+    var oa = _.extend({},obj1,obj2);
+    var ob = _.extend(true,{},obj1,obj2);
+
+    //console.log(oa);
+    //console.log(ob);
+    console.log('oac',oa.c.c1);
+    console.log('obc',ob.c.c1);
+    obj1.c.c1 = 'cccc';
+    console.log('oac',oa.c.c1);
+    console.log('obc',ob.c.c1);
+    //console.log(oa);
+    //console.log(ob);
+</script>
+</body>
+</html>
